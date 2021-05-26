@@ -1,5 +1,6 @@
 package com.skrefi.PAOProject.data.models.userData.users;
 
+import com.opencsv.bean.CsvBindByName;
 import com.skrefi.PAOProject.data.models.Course;
 import com.skrefi.PAOProject.data.models.userData.Address;
 import com.skrefi.PAOProject.data.models.userData.Grupa;
@@ -10,7 +11,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Student extends Person {
+    @CsvBindByName
     private Integer grupaId;
+
     private ArrayList<Course> courses;
 
     public Student(String firstName, String lastName, String emailAddress, Address address, Integer grupaId, ArrayList<Course> courses) {

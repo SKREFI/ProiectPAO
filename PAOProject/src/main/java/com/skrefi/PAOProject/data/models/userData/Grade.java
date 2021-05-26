@@ -1,9 +1,14 @@
 package com.skrefi.PAOProject.data.models.userData;
 
+import com.opencsv.bean.CsvBindByName;
+
 import java.util.Objects;
 
 public class Grade {
+    @CsvBindByName
     private Double labScore;
+
+    @CsvBindByName
     private Double examScore;
 
     public Grade(Double labScore, Double examScore) {

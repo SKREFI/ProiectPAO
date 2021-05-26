@@ -1,5 +1,6 @@
 package com.skrefi.PAOProject.data.models.userData;
 
+import com.opencsv.bean.CsvBindByName;
 import com.skrefi.PAOProject.data.models.userData.users.Student;
 import com.skrefi.PAOProject.data.utils.Domain;
 
@@ -7,12 +8,16 @@ import java.util.Objects;
 
 public class Grupa {
     private Integer id;
+
     private Domain domain;
 
+    @CsvBindByName
     private Integer studyYear;
+    @CsvBindByName
     private Integer yearSeries;
+    @CsvBindByName
     private Integer groupId;
-
+    @CsvBindByName
     private Integer numberOfStudents;
     private Student representant;
 
